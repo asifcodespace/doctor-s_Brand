@@ -7,39 +7,43 @@
   }
 </script>
 
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-white/60 border-b border-white/20 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20 items-center">
-      
-      <!-- Logo and Doctor Name -->
-      <div class="flex items-center">
-        <!-- Replace with actual logo image later -->
-        <a href="/" class="flex items-center gap-3">
-          <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl">
-            A
-          </div>
-          <div>
-            <h1 class="text-xl font-bold text-text-main leading-tight">{config.doctor.name}</h1>
-            <p class="text-sm font-medium text-text-muted">{config.doctor.title}</p>
-          </div>
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center font-bold text-2xl text-white shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform duration-300">
+          A
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-text-main leading-tight group-hover:text-primary transition-colors duration-300">{config.doctor.name}</h1>
+          <p class="text-sm font-medium text-text-muted">{config.doctor.title}</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8">
+        {#each ['About', 'Services', 'Contact'] as item}
+          <a
+            href="#{item.toLowerCase()}"
+            class="relative text-text-main font-medium hover:text-primary transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+          >
+            {item}
+          </a>
+        {/each}
+      </nav>
+
+      <!-- CTA -->
+      <div class="hidden md:flex">
+        <a href="#contact" class="btn-primary shadow-lg shadow-primary/30 hover:scale-105 hover:-translate-y-0.5 transition-all duration-200">
+          Book Appointment
         </a>
       </div>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="#about" class="text-text-main hover:text-primary transition-colors font-medium">About</a>
-        <a href="#services" class="text-text-main hover:text-primary transition-colors font-medium">Services</a>
-        <a href="#contact" class="text-text-main hover:text-primary transition-colors font-medium">Contact</a>
-      </nav>
-
-      <!-- Desktop CTA -->
-      <div class="hidden md:flex items-center">
-        <a href="#contact" class="btn-primary">Book Appointment</a>
-      </div>
-
-      <!-- Mobile menu button -->
+      <!-- Mobile button -->
       <div class="flex items-center md:hidden">
-        <button on:click={toggleMenu} class="text-text-main hover:text-primary focus:outline-none focus:text-primary" aria-label="Toggle menu">
+        <button on:click={toggleMenu} class="text-text-main hover:text-primary focus:outline-none transition-colors" aria-label="Toggle menu">
           <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
             {#if isMenuOpen}
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -52,14 +56,14 @@
     </div>
   </div>
 
-  <!-- Mobile Navigation -->
+  <!-- Mobile Menu -->
   {#if isMenuOpen}
-    <div class="md:hidden bg-white border-t border-gray-100 pb-4 px-4 shadow-lg absolute w-full">
+    <div class="md:hidden absolute w-full backdrop-blur-xl bg-white/80 border-b border-white/30 shadow-lg pb-4 px-4">
       <div class="flex flex-col space-y-4 pt-4">
-        <a href="#about" class="text-text-main font-medium hover:text-primary" on:click={toggleMenu}>About</a>
-        <a href="#services" class="text-text-main font-medium hover:text-primary" on:click={toggleMenu}>Services</a>
-        <a href="#contact" class="text-text-main font-medium hover:text-primary" on:click={toggleMenu}>Contact</a>
-        <a href="#contact" class="btn-primary inline-block text-center mt-4" on:click={toggleMenu}>Book Appointment</a>
+        {#each ['About', 'Services', 'Contact'] as item}
+          <a href="#{item.toLowerCase()}" class="text-text-main font-medium hover:text-primary transition-colors" on:click={toggleMenu}>{item}</a>
+        {/each}
+        <a href="#contact" class="btn-primary text-center mt-4" on:click={toggleMenu}>Book Appointment</a>
       </div>
     </div>
   {/if}
