@@ -23,12 +23,17 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden md:flex space-x-8">
+      <nav class="hidden md:flex items-center space-x-1">
         {#each ['About', 'Services', 'Contact'] as item}
           <a
             href="#{item.toLowerCase()}"
-            class="relative text-text-main font-medium hover:text-primary transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary hover:after:w-full after:transition-all after:duration-300"
+            class="relative px-4 py-2 rounded-full text-text-main font-medium
+                   hover:text-primary hover:bg-primary/8
+                   transition-all duration-250 ease-out
+                   group flex items-center gap-1.5"
           >
+            <!-- Animated dot that appears on hover -->
+            <span class="w-1.5 h-1.5 rounded-full bg-primary scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"></span>
             {item}
           </a>
         {/each}
