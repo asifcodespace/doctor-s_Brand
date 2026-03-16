@@ -17,107 +17,79 @@
   }
 </script>
 
-<header class="sticky top-0 z-50 bg-primary border-b border-white/5 transition-colors duration-400">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between h-20 items-center">
+<header class="fixed top-0 left-0 right-0 z-100 h-[80px] flex items-center px-16 md:px-6 gap-8 transition-all duration-300" class:scrolled={false}>
+  <!-- Logo -->
+  <a href="/" class="font-display text-2xl text-cream tracking-wider mr-auto whitespace-nowrap opacity-90">
+    {config.doctor.name}
+  </a>
 
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 group">
-        <img
-          src="/images/logo-symbol.png"
-          alt="Dr. Avena symbol"
-          class="w-11 h-11 object-contain transition-transform duration-300 drop-shadow-sm"
-        />
-        <div class="flex flex-col">
-          <span class="text-2xl font-light text-white tracking-tight leading-none group-hover:text-accent transition-colors duration-300" style="font-family: 'Georgia', serif;">
-            Dr. Avena
-          </span>
-          <span class="text-[9px] text-white/40 uppercase tracking-[0.3em] font-light mt-1.5">
-            General Practitioner
-          </span>
-        </div>
+  <!-- Desktop Nav -->
+  <nav class="hidden md:flex items-center gap-4">
+    {#each [
+      { label: 'SERVICES', href: '#services' },
+      { label: 'ABOUT', href: '#about' },
+      { label: 'REVIEWS', href: '#reviews' },
+      { label: 'CONTACT', href: '#contact' }
+    ] as item}
+      <a href={item.href} class="text-mist text-[12px] tracking-widest font-medium transition-colors duration-200 hover:text-accent py-1">
+        {item.label}
       </a>
+    {/each}
+    <a href="#contact" class="bg-accent text-white text-[12px] tracking-widest font-semibold px-4.5 py-2 rounded-sm transition-all duration-200 hover:brightness-110 hover:-translate-y-px">
+      BOOK NOW
+    </a>
+  </nav>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center space-x-6">
-        {#each [
-          { label: 'Services', href: '#services' },
-          { label: 'About', href: '#about' },
-          { label: 'Reviews', href: '#reviews' },
-          { label: 'Contact', href: '#contact' }
-        ] as item}
-          <a href={item.href} class="nav-link">{item.label}</a>
-        {/each}
-      </nav>
-
-      <!-- Right controls -->
-      <div class="hidden md:flex items-center gap-6">
-        <!-- Book Now button (solid gold) -->
-        <a href="#contact" class="btn-primary rounded-sm px-6 py-2">
-          BOOK NOW
-        </a>
-
-        <!-- Moon / Sun toggle (simple) -->
-        <button
-          onclick={toggleDark}
-          aria-label="Toggle dark mode"
-          class="text-accent transition-colors duration-300"
-        >
-          {#if isDark}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
-          {:else}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          {/if}
-        </button>
-      </div>
-
-      <!-- Mobile button -->
-      <div class="flex items-center gap-4 md:hidden">
-        <button onclick={toggleDark} class="text-white">
-          {#if isDark}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-            </svg>
-          {:else}
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-          {/if}
-        </button>
-        <button onclick={toggleMenu} class="text-white" aria-label="Toggle menu">
-          <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-            {#if isMenuOpen}
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            {:else}
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            {/if}
-          </svg>
-        </button>
-      </div>
-    </div>
+  <!-- Theme Toggle -->
+  <div class="flex items-center ml-4">
+    <button
+      onclick={toggleDark}
+      aria-label="Toggle dark mode"
+      class="bg-transparent border border-mist/30 rounded-full w-10 h-10 flex items-center justify-center text-mist text-sm cursor-pointer transition-all duration-200 hover:border-mist"
+    >
+      {isDark ? '☀️' : '🌙'}
+    </button>
   </div>
+
+  <!-- Mobile Toggle -->
+  <button class="hidden flex-col gap-[5px] p-2 bg-none border-none cursor-pointer sm:flex" onclick={toggleMenu} aria-label="Toggle menu">
+    <span class="block w-[22px] h-[2px] bg-mist rounded-[2px] transition-all duration-200" style={isMenuOpen ? 'transform: rotate(45deg) translate(5px,5px)' : ''}></span>
+    <span class="block w-[22px] h-[2px] bg-mist rounded-[2px] transition-all duration-200" style={isMenuOpen ? 'opacity: 0' : ''}></span>
+    <span class="block w-[22px] h-[2px] bg-mist rounded-[2px] transition-all duration-200" style={isMenuOpen ? 'transform: rotate(-45deg) translate(5px,-5px)' : ''}></span>
+  </button>
 
   <!-- Mobile Menu -->
   {#if isMenuOpen}
-    <div class="md:hidden absolute w-full bg-primary border-b border-white/10 shadow-lg pb-6 px-4">
-      <div class="flex flex-col space-y-4 pt-4">
-        {#each [
-          { label: 'Services', href: '#services' },
-          { label: 'About', href: '#about' },
-          { label: 'Reviews', href: '#reviews' },
-          { label: 'Contact', href: '#contact' }
-        ] as item}
-          <a href={item.href} class="text-white/80 font-medium hover:text-white transition-colors" onclick={toggleMenu}>{item.label}</a>
-        {/each}
-        <a href="#contact" class="btn-primary text-center mt-4" onclick={toggleMenu}>BOOK NOW</a>
-      </div>
+    <div class="fixed top-[80px] left-0 right-0 bg-primary flex flex-col px-12 sm:px-6 py-8 border-t border-white/5 animate-slide-down shadow-xl">
+      <a href="#services" class="text-mist no-underline text-sm py-3 border-b border-white/5 tracking-widest" onclick={toggleMenu}>SERVICES</a>
+      <a href="#about" class="text-mist no-underline text-sm py-3 border-b border-white/5 tracking-widest" onclick={toggleMenu}>ABOUT</a>
+      <a href="#reviews" class="text-mist no-underline text-sm py-3 border-b border-white/5 tracking-widest" onclick={toggleMenu}>REVIEWS</a>
+      <a href="#contact" class="text-mist no-underline text-sm py-3 border-b border-white/5 tracking-widest" onclick={toggleMenu}>CONTACT</a>
+      <a href="#contact" class="text-accent no-underline text-sm py-4 font-bold tracking-widest" onclick={toggleMenu}>BOOK APPOINTMENT →</a>
     </div>
   {/if}
 </header>
+
+<style>
+  header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.25s ease-out;
+  }
+
+  @media (max-width: 768px) {
+    .hidden { display: none; }
+    .md\:flex { display: flex; }
+  }
+
+  @media (max-width: 640px) {
+    .sm\:flex { display: flex; }
+  }
+</style>

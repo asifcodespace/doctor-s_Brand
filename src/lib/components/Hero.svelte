@@ -2,59 +2,37 @@
   import { config } from '$lib/config';
 </script>
 
-<section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-primary">
-  <!-- Decorative circle rings (solid lines as in screenshot) -->
-  <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-    <div class="absolute top-1/2 right-[-15%] -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-white/5"></div>
-    <div class="absolute top-1/2 right-[-5%] -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/5"></div>
-    <div class="absolute top-1/2 right-[5%] -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/10"></div>
-  </div>
+<section id="hero" class="min-h-screen bg-primary flex items-center px-16 sm:px-6 py-24 relative overflow-hidden">
+  <!-- Decorative Rings -->
+  <div class="absolute -right-[200px] -top-[100px] w-[900px] h-[900px] rounded-full border border-mist/5 pointer-events-none animate-ring-pulse"></div>
+  <div class="absolute -right-[50px] top-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full border border-mist/10 pointer-events-none"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-8 w-full">
-    <!-- Eyebrow label -->
-    <p class="text-accent text-sm font-semibold tracking-[0.25em] uppercase mb-6">
-      Care That Endures.
-    </p>
-
-    <!-- Doctor Name -->
-    <h1 class="text-6xl sm:text-7xl xl:text-8xl font-extralight text-white leading-tight mb-2"
-        style="font-family: 'Georgia', 'Times New Roman', serif;">
+  <div class="relative z-10 max-w-[800px]">
+    <div class="text-[12px] tracking-[0.2em] uppercase text-accent font-semibold mb-10 animate-fade-up" style="animation-delay: 0.2s;">
+      Care that endures.
+    </div>
+    
+    <h1 class="font-display text-[clamp(48px,7vw,86px)] font-light text-cream leading-[1.05] mb-2 animate-fade-up" style="animation-delay: 0.35s;">
       {config.doctor.name}
     </h1>
 
-    <!-- Title in italic -->
-    <p class="text-2xl sm:text-3xl text-white/80 italic font-light mb-8"
-       style="font-family: 'Georgia', 'Times New Roman', serif;">
+    <div class="font-display text-[clamp(20px,3vw,26px)] italic text-mist mb-8 animate-fade-up" style="animation-delay: 0.5s;">
       {config.doctor.title}
-    </p>
+    </div>
 
-    <!-- Description -->
-    <p class="text-white/60 text-base sm:text-lg leading-relaxed max-w-lg mb-8">
+    <p class="text-[15px] text-mist/80 leading-[1.8] max-w-[480px] mb-12 animate-fade-up" style="animation-delay: 0.65s;">
       We provide compassionate, expert medical care for you and your family. Your health is our lifelong commitment.
     </p>
 
-    <!-- CTA buttons (Solid & Outline) -->
-    <div class="flex flex-col sm:flex-row gap-6">
-      <!-- Book Appointment - solid gold -->
-      <a href="#contact"
-         class="btn-primary px-8 py-4 rounded-sm text-base">
-        Book Appointment
-      </a>
-
-      <!-- Learn More - white outline -->
-      <a href="#about"
-         class="btn-outline px-8 py-4 rounded-sm text-base">
-        Learn More
-      </a>
+    <div class="flex gap-4 flex-wrap animate-fade-up" style="animation-delay: 0.8s;">
+      <a href="#contact" class="btn btn-gold px-8 py-3.5 rounded-sm">Book Appointment</a>
+      <a href="#about" class="btn btn-outline px-8 py-3.5 rounded-sm hover:border-mist">Learn More</a>
     </div>
-
-
   </div>
-
-  <!-- Decorative circles (extra small one on right bottom) -->
-  <div class="absolute bottom-10 right-10 w-20 h-20 rounded-full bg-accent/5 border border-accent/10"></div>
 </section>
 
 <style>
-  /* Ensure clean serif look */
+  .animate-ring-pulse {
+    animation: ringPulse 4s ease-in-out infinite;
+  }
 </style>

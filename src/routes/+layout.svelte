@@ -6,10 +6,10 @@
 
 <svelte:head>
   <title>Dr. Avena - General Practitioner</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-bg-base font-sans">
+<div class="min-h-screen flex flex-col bg-white font-body">
   <Header />
   
   <main class="grow">

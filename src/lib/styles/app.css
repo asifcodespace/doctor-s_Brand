@@ -1,73 +1,101 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1e3a35; /* Dark forest green from screenshot */
-  --color-primary-light: #2d554e;
-  --color-secondary: #e6e2cd;
-  --color-accent: #a68b4c; /* Deeper, more saturated gold */
-  --color-accent-light: #bfa565;
-  --color-text-main: #1e293b;
-  --color-text-muted: #64748b;
-  --color-bg-base: #f8fafc;
-  --color-bg-offset: #ffffff;
+  --color-primary: #163331;
+  --color-secondary: #4A7B6F;
+  --color-accent: #C4973A;
+  --color-mist: #A8C5BE;
+  --color-cream: #F5F0E8;
+  --color-white: #FDFBF7;
+  --color-charcoal: #2C2C2C;
+  --color-mid: #6B6B6B;
+  --color-light: #E8E4DC;
+  --color-dark-bg: #0d1f1e;
+  --color-dark-surf: #1a3d3a;
+  --color-dark-card: #2d5e52;
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
 }
 
 @layer base {
-  html, body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    background-color: var(--color-bg-base);
-    color: var(--color-text-main);
-    line-height: 1.6;
-    font-weight: 300; /* Thinner global font weight */
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.4s ease, color 0.4s ease;
+  html {
+    scroll-behavior: smooth;
   }
 
-  /* Dark mode overrides */
-  html.dark {
-    --color-text-main: #e2e8f0;
-    --color-text-muted: #94a3b8;
-    --color-bg-base: #0d1f1e;
-    --color-bg-offset: #1a2f2e;
+  body {
+    @apply bg-white text-charcoal font-body text-[15px] leading-[1.6] transition-colors duration-300;
+  }
+
+  /* Dark mode */
+  .dark {
+    --color-primary: #a8c5be;
+    --color-secondary: #4A7B6F;
+    --color-cream: #0d1f1e;
+    --color-white: #1a3d3a;
+    --color-charcoal: #e0ded8;
+    --color-mid: #a8c5be;
+    --color-light: #2d5e52;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-display font-light;
   }
 }
 
 @layer components {
-  /* --- Solid primary button (matches screenshot) --- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-sm font-body text-sm font-medium cursor-pointer transition-all duration-200 border-none no-underline;
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all duration-200;
-    background-color: var(--color-accent);
-    color: white;
+    @apply bg-primary text-cream;
   }
   .btn-primary:hover {
-    @apply -translate-y-0.5;
-    background-color: var(--color-accent-light);
+    @apply -translate-y-0.5 shadow-lg brightness-90;
+    box-shadow: 0 6px 20px rgba(26, 61, 58, 0.3);
   }
 
-  /* --- Simple outline button (matches screenshot) --- */
+  .btn-gold {
+    @apply bg-accent text-white;
+  }
+  .btn-gold:hover {
+    @apply -translate-y-0.5 shadow-lg brightness-110;
+    box-shadow: 0 6px 20px rgba(196, 151, 58, 0.35);
+  }
+
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm border-2 transition-all duration-200;
-    border-color: rgba(255, 255, 255, 0.3);
-    color: white;
+    @apply bg-transparent text-cream border-[1.5px] border-mist/40;
   }
   .btn-outline:hover {
-    @apply -translate-y-0.5 bg-white/10 border-white/50;
+    @apply border-mist bg-mist/10;
   }
 
-  /* --- Header nav links --- */
-  .nav-link {
-    @apply text-white/70 text-sm font-semibold uppercase tracking-widest transition-colors duration-200 hover:text-white px-2 py-1;
+  /* Section utility */
+  .section-padding {
+    @apply py-24 px-12 md:py-16 md:px-8 sm:py-12 sm:px-5;
   }
 
-  /* --- Standard card (was glass-card) --- */
-  .standard-card {
-    @apply bg-white border border-slate-200 rounded-xl;
+  .sec-label {
+    @apply text-xs tracking-[0.18em] uppercase text-secondary font-medium mb-2;
   }
-  html.dark .standard-card {
-    @apply bg-white/5 border-white/10;
+
+  .sec-title {
+    @apply font-display text-[38px] md:text-3xl font-light text-primary mb-12 leading-[1.15];
   }
+}
+
+/* Animations */
+@keyframes ringPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.6; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
 }

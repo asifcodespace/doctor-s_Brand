@@ -16,41 +16,31 @@
   };
 </script>
 
-<section id="services" class="py-24 relative overflow-hidden bg-[#f3efe4]">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="mb-16">
-      <span class="text-[10px] font-bold text-primary/60 tracking-[0.3em] uppercase mb-4 block">
-        WHAT WE OFFER
-      </span>
-      <h2 class="text-4xl md:text-5xl font-light text-primary" style="font-family: 'Georgia', serif;">
-        Our Services
-      </h2>
-    </div>
+<section id="services" class="bg-cream px-12 py-24 sm:px-5 sm:py-12">
+  <div class="sec-label">What We Offer</div>
+  <h2 class="sec-title">Our Services</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {#each config.services as service}
-        <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-stone-200 transition-all duration-300 hover:shadow-md">
-          <!-- Icon Box with Emoji -->
-          <div class="w-16 h-16 rounded-xl bg-primary flex items-center justify-center mb-8 text-3xl">
-            {#if service.icon === 'stethoscope'}
-               <span>🩺</span>
-            {:else if service.icon === 'shield-check'}
-               <span>🛡️</span>
-            {:else if service.icon === 'heartbeat' || service.icon === 'pill'}
-               <span>💊</span>
-            {:else}
-              <span>📋</span>
-            {/if}
-          </div>
-
-          <h3 class="text-2xl font-light text-primary mb-6" style="font-family: 'Georgia', serif;">
-            {service.title}
-          </h3>
-          <p class="text-primary/60 text-lg leading-relaxed max-w-sm">
-            {service.description}
-          </p>
+  <div class="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-6">
+    {#each config.services as service}
+      <div class="bg-white rounded-lg p-8 border border-light transition-all duration-300 hover:shadow-[0_12px_32px_rgba(26,61,58,0.1)] hover:-translate-y-1">
+        <div class="w-12 h-12 rounded-md bg-primary flex items-center justify-center text-[22px] mb-4 transition-colors duration-200 group-hover:bg-secondary">
+          {#if service.icon === 'stethoscope'}
+            <span>🩺</span>
+          {:else if service.icon === 'shield-check'}
+            <span>🛡️</span>
+          {:else if service.icon === 'heartbeat' || service.icon === 'pill'}
+            <span>💊</span>
+          {:else}
+            <span>📋</span>
+          {/if}
         </div>
-      {/each}
-    </div>
+        <h3 class="font-display text-[20px] text-primary mb-2">
+          {service.title}
+        </h3>
+        <p class="text-[13px] text-mid leading-[1.7]">
+          {service.description}
+        </p>
+      </div>
+    {/each}
   </div>
 </section>
