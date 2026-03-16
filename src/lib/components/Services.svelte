@@ -16,14 +16,14 @@
   };
 </script>
 
-<section id="services" class="bg-cream px-12 py-24 sm:px-5 sm:py-12">
-  <div class="sec-label">What We Offer</div>
-  <h2 class="sec-title">Our Services</h2>
+<section id="services" class="bg-cream px-12 py-[88px] sm:px-6 sm:py-16">
+  <div class="text-[11px] tracking-[0.18em] uppercase text-secondary font-medium mb-3">What We Offer</div>
+  <h2 class="font-display text-[clamp(28px,4vw,38px)] text-primary font-light mb-14 leading-[1.15]">Our Services</h2>
 
-  <div class="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-6">
+  <div class="grid grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-6">
     {#each config.services as service}
-      <div class="bg-white rounded-lg p-8 border border-light transition-all duration-300 hover:shadow-[0_12px_32px_rgba(26,61,58,0.1)] hover:-translate-y-1">
-        <div class="w-12 h-12 rounded-md bg-primary flex items-center justify-center text-[22px] mb-4 transition-colors duration-200 group-hover:bg-secondary">
+      <div class="bg-white rounded-[12px] p-8 border border-light transition-all duration-300 hover:shadow-[0_12px_32px_rgba(26,61,58,0.08)] group cursor-default">
+        <div class="w-12 h-12 rounded-[10px] bg-primary flex items-center justify-center text-[22px] mb-6 transition-colors duration-200 group-hover:bg-secondary">
           {#if service.icon === 'stethoscope'}
             <span>🩺</span>
           {:else if service.icon === 'shield-check'}
@@ -34,10 +34,10 @@
             <span>📋</span>
           {/if}
         </div>
-        <h3 class="font-display text-[20px] text-primary mb-2">
+        <h3 class="font-display text-[20px] text-primary font-light mb-3">
           {service.title}
         </h3>
-        <p class="text-[13px] text-mid leading-[1.7]">
+        <p class="text-[13px] text-mid leading-[1.7] font-light opacity-90">
           {service.description}
         </p>
       </div>
