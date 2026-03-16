@@ -12,7 +12,7 @@
 <div class="min-h-screen flex flex-col bg-bg-base font-sans">
   <Header />
   
-  <main class="flex-grow">
+  <main class="grow">
     <slot />
   </main>
   

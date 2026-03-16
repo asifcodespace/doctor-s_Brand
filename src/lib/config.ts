@@ -21,19 +21,19 @@ export const config = {
     {
       id: "general-consultation",
       title: "General Consultation",
-      description: "Thorough check-ups and expert medical advice for a variety of common health concerns.",
+      description: "Comprehensive health assessment and diagnosis for all ages in a calm, professional setting.",
       icon: "stethoscope" // Placeholder for an icon name or SVG path
     },
     {
       id: "preventive-care",
       title: "Preventive Care",
-      description: "Vaccinations, routine screenings, and lifestyle counseling to keep you healthy and prevent future illnesses.",
+      description: "Routine checkups, vaccinations, and screenings to keep you healthy before illness begins.",
       icon: "shield-check"
     },
     {
       id: "chronic-disease-management",
       title: "Chronic Disease Management",
-      description: "Ongoing care and personalized treatment plans for conditions like diabetes, hypertension, and asthma.",
+      description: "Ongoing support and treatment plans for diabetes, hypertension, and long-term conditions.",
       icon: "heartbeat"
     },
     {
