@@ -7,15 +7,40 @@
   ];
 </script>
 
-<section class="bg-secondary px-12 py-12 flex flex-row sm:flex-col gap-0">
-  {#each stats as stat, i}
-    <div class="flex-1 text-center border-r sm:border-r-0 sm:border-b border-white/15 px-6 sm:py-4 last:border-0 last:px-0">
-      <div class="font-display text-[40px] text-white font-light">
-        {stat.value}
-      </div>
-      <div class="text-[11px] text-white/65 tracking-widest uppercase mt-1">
-        {stat.label}
-      </div>
+<section class="bg-secondary px-4 py-20 flex flex-row items-center justify-center gap-0">
+  <div class="flex-1 flex flex-col items-center text-center border-r border-white/10 px-4 last:border-0">
+    <div class="font-display text-[40px] text-white font-light leading-none mb-2">
+      12+
     </div>
-  {/each}
+    <div class="text-[11px] text-white/70 tracking-[0.18em] font-medium uppercase leading-tight">
+      YEARS EXPERIENCE
+    </div>
+  </div>
+
+  <div class="flex-1 flex flex-col items-center text-center border-r border-white/10 px-4 last:border-0">
+    <div class="font-display text-[40px] text-white font-light leading-none mb-2 flex items-baseline gap-0.5">
+      4.9<span class="text-[28px] opacity-80">★</span>
+    </div>
+    <div class="text-[11px] text-white/70 tracking-[0.18em] font-medium uppercase leading-tight">
+      PATIENT RATING
+    </div>
+  </div>
+
+  <div class="flex-1 flex flex-col items-center text-center border-r border-white/10 px-4 last:border-0">
+    <div class="font-display text-[40px] text-white font-light leading-none mb-2">
+      3,000+
+    </div>
+    <div class="text-[11px] text-white/70 tracking-[0.18em] font-medium uppercase leading-tight">
+      PATIENTS SERVED
+    </div>
+  </div>
+
+  <div class="flex-1 flex flex-col items-center text-center px-4">
+    <div class="font-display text-[40px] text-white font-light leading-none mb-2 flex items-baseline gap-0.5">
+      24<span class="text-[28px] font-extralight opacity-80">h</span>
+    </div>
+    <div class="text-[11px] text-white/70 tracking-[0.18em] font-medium uppercase leading-tight">
+      RESPONSE TIME
+    </div>
+  </div>
 </section>
