@@ -8,12 +8,12 @@
     .filter(Boolean);
 </script>
 
-<section id="about" class="bg-white px-12 py-[88px] sm:px-5 sm:py-16">
+<section id="about" class="bg-white px-8 md:px-12 py-[88px] sm:py-16 overflow-hidden">
   <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-2 gap-10 items-center">
-      <!-- Avatar Box -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
+      <!-- Left: Image Area -->
       <div
-        class="relative about-img w-full h-[500px] bg-primary rounded-[16px] flex items-center justify-center overflow-hidden shadow-sm p-16"
+        class="about-img bg-primary rounded-[16px] h-[340px] md:h-[420px] flex items-center justify-center relative group overflow-hidden shadow-sm p-16"
       >
         <div
           class="font-display text-[110px] text-mist italic font-light opacity-30 select-none"

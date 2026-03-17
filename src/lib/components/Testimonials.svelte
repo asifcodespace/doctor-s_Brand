@@ -30,7 +30,7 @@
     </h2>
   </div>
 
-  <div class="max-w-full mx-[4px] grid grid-cols-3 gap-6">
+  <div class="max-w-full mx-[4px] grid grid-cols-1 md:grid-cols-3 gap-6">
     {#each testimonials as review}
       <div class="bg-white rounded-lg p-8 border border-light text-left">
         <div class="text-accent text-sm mb-2">{review.stars}</div>
