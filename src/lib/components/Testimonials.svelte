@@ -19,17 +19,19 @@
 </script>
 
 <section id="reviews" class="bg-cream px-12 py-24 sm:px-5 sm:py-12">
-  <div class="sec-label">Patient Stories</div>
-  <h2 class="sec-title">What Patients Say</h2>
+  <div class="text-left mb-12">
+    <div class="text-[11px] tracking-[0.18em] uppercase text-secondary font-medium mb-2">Patient Stories</div>
+    <h2 class="font-display text-[38px] text-primary font-light leading-[1.15]">What Patients Say</h2>
+  </div>
 
-  <div class="grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-6">
+  <div class="max-w-full mx-[4px] grid grid-cols-3 gap-6">
     {#each testimonials as review}
-      <div class="bg-white rounded-lg p-8 border border-light">
+      <div class="bg-white rounded-lg p-8 border border-light text-left">
         <div class="text-accent text-sm mb-2">{review.stars}</div>
         <div class="font-display text-[18px] text-primary italic leading-normal mb-4">
           {review.text}
         </div>
-        <div class="text-[12px] text-mid font-medium">
+        <div class="text-[12px] text-mid font-medium italic">
           — {review.author}
         </div>
       </div>
