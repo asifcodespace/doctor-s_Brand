@@ -7,8 +7,8 @@
   ];
 </script>
 
-<section class="bg-secondary px-4 py-20 flex flex-row items-center justify-center gap-0">
-  <div class="flex-1 flex flex-col items-center text-center border-r border-white/10 px-4 last:border-0">
+<section class="bg-secondary px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
+  <div class="flex-1 w-full flex flex-col items-center text-center border-b border-white/10 md:border-b-0 md:border-r pb-8 md:pb-0 px-4 last:border-0 last:pb-0">
     <div class="font-display text-[40px] text-white font-light leading-none mb-2">
       12+
     </div>
@@ -17,7 +17,7 @@
     </div>
   </div>
 
-  <div class="flex-1 flex flex-col items-center text-center border-r border-white/10 px-4 last:border-0">
+  <div class="flex-1 w-full flex flex-col items-center text-center border-b border-white/10 md:border-b-0 md:border-r pb-8 md:pb-0 px-4 last:border-0 last:pb-0">
     <div class="font-display text-[40px] text-white font-light leading-none mb-2 flex items-baseline gap-0.5">
       4.9<span class="text-[28px] opacity-80">★</span>
     </div>
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <div class="flex-1 flex flex-col items-center text-center border-r border-white/10 px-4 last:border-0">
+  <div class="flex-1 w-full flex flex-col items-center text-center border-b border-white/10 md:border-b-0 md:border-r pb-8 md:pb-0 px-4 last:border-0 last:pb-0">
     <div class="font-display text-[40px] text-white font-light leading-none mb-2">
       3,000+
     </div>
@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <div class="flex-1 flex flex-col items-center text-center px-4">
+  <div class="flex-1 w-full flex flex-col items-center text-center px-4">
     <div class="font-display text-[40px] text-white font-light leading-none mb-2 flex items-baseline gap-0.5">
       24<span class="text-[28px] font-extralight opacity-80">h</span>
     </div>

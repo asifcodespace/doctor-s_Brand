@@ -5,7 +5,7 @@
 <section id="contact" class="px-12 py-24 bg-white sm:px-5 sm:py-16">
   <div class="max-w-7xl mx-auto">
     <div
-      class="grid grid-cols-[0.8fr_1.2fr] lg:grid-cols-2 md:grid-cols-1 gap-20 items-start"
+      class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start"
     >
       <!-- Left Column: Header + Info -->
       <div class="flex flex-col">
