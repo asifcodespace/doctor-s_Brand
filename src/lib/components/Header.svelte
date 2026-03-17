@@ -139,10 +139,4 @@
   .animate-slide-down {
     animation: slideDown 0.25s ease-out;
   }
-
-  @media (max-width: 768px) {
-    .md\:flex {
-      display: flex;
-    }
-  }
 </style>
