@@ -29,17 +29,80 @@
 
   /* Dark mode */
   .dark {
-    --color-primary: #a8c5be;
-    --color-secondary: #4A7B6F;
-    --color-cream: #0d1f1e;
-    --color-white: #1a3d3a;
-    --color-charcoal: #e0ded8;
-    --color-mid: #a8c5be;
-    --color-light: #2d5e52;
+    --color-primary: #a8c5be; /* Light version for text */
+    --color-secondary: #7aa59c; /* Brighter for text contrast */
+    --color-charcoal: #f0f4f3; /* Light principal text */
+    --color-mid: #a8c5be; /* Muted light text */
+    --color-light: #1e3d3a; /* Darker borders */
+    
+    /* Keep these light so text-white/text-cream still works as light text */
+    --color-white: #fdfbf7; 
+    --color-cream: #f5f0e8;
+    --color-mist: #d1e2df;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-light;
+  }
+
+  /* Force BACKGROUNDS to be dark in dark mode for sections */
+  .dark body,
+  .dark header, 
+  .dark footer, 
+  .dark section,
+  .dark .bg-white,
+  .dark .bg-cream,
+  .dark .bg-primary:not(div), /* Affect sections but not small divs */
+  .dark .bg-secondary:not(div),
+  .dark .about-img {
+    background-color: #0d1f1e !important;
+    color: #f0f4f3;
+  }
+
+  /* Specific style for small primary/secondary boxes in dark mode (Icons, badges) */
+  .dark div.bg-primary, 
+  .dark div.bg-secondary,
+  .dark span.bg-primary\/8 {
+    background-color: #1a3d3a !important;
+    border: 1px solid rgba(168, 197, 190, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  /* Hover effect for these icons/badges in dark mode */
+  .dark .group:hover div.bg-primary, 
+  .dark .group:hover div.bg-secondary {
+    background-color: #a8c5be !important;
+    color: #0d1f1e !important;
+    border-color: #a8c5be !important;
+  }
+
+  /* Distinct color for secondary background in dark mode (Experience/Stats section) */
+  .dark section.bg-secondary {
+    background-color: #1a3d3a !important;
+    color: #f0f4f3;
+  }
+
+  /* Ensure containers like cards have a slightly lighter surface */
+  .dark .bg-white.rounded-lg,
+  .dark .bg-white.rounded-\[12px\],
+  .dark .bg-primary\/2 {
+    background-color: #142a29 !important;
+  }
+
+  /* Specific fix for inputs and selects */
+  .dark input, .dark textarea, .dark select {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: #1e3d3a !important;
+    color: #f0f4f3 !important;
+  }
+
+  /* Specific fix for buttons in dark mode */
+  .dark .btn-primary {
+    background-color: #a8c5be !important;
+    color: #0d1f1e !important;
+  }
+  .dark .btn-primary:hover {
+    filter: brightness(0.9) !important;
   }
 }
 
