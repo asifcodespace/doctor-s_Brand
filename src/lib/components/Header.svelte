@@ -17,7 +17,7 @@
   }
 </script>
 
-<header class="fixed top-0 left-0 right-0 z-100 h-[80px] flex items-center px-16 md:px-6 gap-8 transition-all duration-300" class:scrolled={false}>
+<header class="fixed top-0 left-0 right-0 z-100 h-[80px] flex items-center px-16 md:px-6 gap-8 transition-all duration-300 bg-primary" class:scrolled={false}>
   <!-- Logo -->
   <a href="/" class="font-display text-2xl text-cream tracking-wider mr-auto whitespace-nowrap opacity-90">
     {config.doctor.name}
