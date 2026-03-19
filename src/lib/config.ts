@@ -4,7 +4,7 @@ export const config = {
     title: "General Practitioner",
     qualifications: "MBBS (DU), DMU (Ultrasound)",
     bio: "Dr. Nafis is an experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, she specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of her patients.",
-    image: "/images/Nafis_Tarafer.jpeg", // Placeholder for actual doctor image
+    image: "/images/nafis_tarafer.jpeg", // Placeholder for actual doctor image
   },
   contact: {
     phone: "+880 1753997900",
