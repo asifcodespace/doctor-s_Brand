@@ -13,16 +13,21 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
       <!-- Left: Image Area -->
       <div
-        class="about-img bg-primary rounded-[16px] h-[340px] md:h-[420px] flex items-center justify-center relative group overflow-hidden shadow-sm p-16"
+        class="about-img bg-primary rounded-[16px] h-[340px] md:h-[420px] flex items-center justify-center relative group overflow-hidden shadow-sm p-0"
       >
+        <img
+          src={config.doctor.image}
+          alt={config.doctor.name}
+          class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+        />
         <div
-          class="font-display text-[110px] text-mist italic font-light opacity-30 select-none"
+          class="absolute inset-0 flex items-center justify-center font-display text-[110px] text-mist italic font-light opacity-10 select-none pointer-events-none"
         >
           M.D.
         </div>
         <!-- Decorative Ring -->
         <div
-          class="absolute -bottom-16 -right-16 w-[300px] h-[300px] rounded-full border border-mist/10"
+          class="absolute -bottom-16 -right-16 w-[300px] h-[300px] rounded-full border border-mist/10 pointer-events-none"
         ></div>
       </div>
 
