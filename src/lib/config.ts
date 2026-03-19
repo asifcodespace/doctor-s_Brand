@@ -1,6 +1,6 @@
 export const config = {
   doctor: {
-    name: "Dr. Nafis Tarafder",
+    name: "Dr. Nafis",
     title: "General Practitioner",
     qualifications: "MBBS (DU), DMU (Ultrasound)",
     bio: "Dr. Nafis is an experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, she specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of her patients.",
