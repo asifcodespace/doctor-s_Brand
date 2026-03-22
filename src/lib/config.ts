@@ -2,19 +2,18 @@ export const config = {
   doctor: {
     name: "Dr. Nafis",
     title: "General Practitioner",
-    qualifications: "MBBS - FCPS",
+    qualifications: "MBBS (DU), DMU (Ultrasound)",
     bio: "Dr. Nafis is a highly experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, he specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of his patients.",
     image: "/images/nafis_tarafder.jpeg",
   },
   contact: {
-    phone: "+880 1234 567890",
-    email: "contact@dravens.com",
-    address: "123 Health Avenue, Dhaka, Bangladesh",
+    phone: "+880 1753997900",
+    email: "nafistarafder@gmail.com",
+    address: "Modern Medical Services, Kanaighat, Sylhet",
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9024424301397!2d90.39108011536269!3d23.75085808458925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8a3683fbbc%3A0x6b3b246a4afc112!2sDhaka!5e0!3m2!1sen!2sbd!4v1625000000000!5m2!1sen!2sbd", // Example embed URL
     workingHours: [
-      { day: "Monday - Friday", time: "09:00 AM - 05:00 PM" },
-      { day: "Saturday", time: "10:00 AM - 02:00 PM" },
-      { day: "Sunday", time: "Closed" },
+        { day: "Saturday - Thursday", time: "05:00 PM - 8.00 PM" },
+        { day: "FRiday", time: "Closed" },
     ]
   },
   services: [
