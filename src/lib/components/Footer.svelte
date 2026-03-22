@@ -9,14 +9,14 @@
            <!-- Brand & Info -->
            <div class="lg:col-span-1 border-b border-white/5 pb-8 lg:border-0 lg:pb-0">
                <a href="/" class="flex items-center gap-3 mb-6">
-                  <img src="/images/logo-symbol.png" alt="Dr. Avena logo" class="w-10 h-10 object-contain" />
+                  <img src={config.branding.logos.symbol} alt={config.doctor.name} class="w-10 h-10 object-contain" />
                  <div>
-                   <h2 class="text-xl font-bold leading-tight">{config.doctor.name}</h2>
+                   <h2 class="text-xl font-bold leading-tight">{config.sections.footer.logoText}</h2>
                    <p class="text-xs text-slate-400 font-medium tracking-wide uppercase">{config.doctor.title}</p>
                  </div>
                </a>
                <p class="text-mist/60 text-sm leading-relaxed mb-6">
-                   Providing compassionate and comprehensive healthcare for you and your family.
+                   {config.sections.footer.description}
                </p>
                
                <!-- Socials -->
@@ -86,7 +86,7 @@
 
        <!-- Copyright -->
        <div class="border-t border-white/5 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-xs text-mist/40">
-           <p>&copy; {new Date().getFullYear()} {config.doctor.name}. All rights reserved.</p>
+           <p>{config.sections.footer.copyrightText}</p>
            <div class="mt-4 md:mt-0 space-x-4">
                <a href="/" class="hover:text-white transition-colors">Privacy Policy</a>
                <a href="/" class="hover:text-white transition-colors">Terms of Service</a>

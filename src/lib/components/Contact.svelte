@@ -14,12 +14,12 @@
           <div
             class="text-[11px] tracking-[0.18em] uppercase text-secondary font-medium mb-3"
           >
-            GET IN TOUCH
+            {config.sections.contact.subtitle}
           </div>
           <h2
             class="font-display text-[48px] text-primary font-light leading-tight"
           >
-            Book an Appointment
+            {config.sections.contact.title}
           </h2>
         </div>
 

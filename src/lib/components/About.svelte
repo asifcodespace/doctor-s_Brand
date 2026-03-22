@@ -36,12 +36,12 @@
         <div
           class="text-[11px] tracking-[0.18em] uppercase text-secondary font-medium mb-3"
         >
-          About
+          {config.sections.about.sectionLabel}
         </div>
         <h2
           class="font-display text-[42px] text-primary font-light mb-4 leading-[1.1]"
         >
-          {config.doctor.name}
+          {config.sections.about.title}
         </h2>
 
         <!-- Qualifications Badges -->
@@ -67,14 +67,14 @@
             {config.doctor.bio}
           </p>
           <p class="text-[15px] text-mid leading-[1.8] opacity-90">
-            Her practice welcomes patients of all ages, offering both in-person
+            His practice welcomes patients of all ages, offering both in-person
             and online consultations tailored to your schedule.
           </p>
         </div>
 
         <div class="pt-2">
           <a href="#contact" class="btn btn-primary inline-flex">
-            Book a Visit
+            {config.sections.about.ctaText}
           </a>
         </div>
       </div>

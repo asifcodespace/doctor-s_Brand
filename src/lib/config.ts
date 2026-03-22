@@ -3,8 +3,13 @@ export const config = {
     name: "Dr. Avena",
     title: "General Practitioner",
     qualifications: "MBBS - FCPS",
+<<<<<<< Updated upstream
     bio: "Dr. Avena is a highly experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, she specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of her patients.",
     image: "/images/nafis_tarafder.jpeg", // Placeholder for actual doctor image
+=======
+    bio: "Dr. Nafis is a highly experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, he specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of his patients.",
+    image: "/images/nafis_tarafder.jpeg",
+>>>>>>> Stashed changes
   },
   contact: {
     phone: "+880 1234 567890",
@@ -44,9 +49,9 @@ export const config = {
     }
   ],
   socials: [
-    { platform: "Facebook", url: "https://facebook.com/dravens", icon: "facebook" },
-    { platform: "LinkedIn", url: "https://linkedin.com/in/dravens", icon: "linkedin" },
-    { platform: "Twitter", url: "https://twitter.com/dravens", icon: "twitter" }
+    { platform: "Facebook", url: "https://facebook.com/drnafis", icon: "facebook" },
+    { platform: "LinkedIn", url: "https://linkedin.com/in/drnafis", icon: "linkedin" },
+    { platform: "Twitter", url: "https://twitter.com/drnafis", icon: "twitter" }
   ],
   branding: {
     siteTitle: "Dr. Nafis Tarafder - General Practitioner",
@@ -57,8 +62,59 @@ export const config = {
       accent: "#a89f78",
     },
     logos: {
-      main: "/images/logo-main.png", // Will place the image here later
-      light: "/images/logo-light.png"
+      main: "/images/logo-full.png",
+      light: "/images/logo-dark.png",
+      symbol: "/images/logo-symbol.png"
+    }
+  },
+  sections: {
+    header: {
+      logoText: "Dr. Nafis",
+      navLinks: [
+        { label: "SERVICES", href: "#services" },
+        { label: "ABOUT", href: "#about" },
+        { label: "REVIEWS", href: "#reviews" },
+        { label: "CONTACT", href: "#contact" }
+      ],
+      ctaText: "BOOK NOW"
+    },
+    hero: {
+      name: "Dr. Nafis",
+      title: "General Practitioner",
+      tagline: "Care that endures.",
+      description: "We provide compassionate, expert medical care for you and your family. Your health is our lifelong commitment.",
+      ctaText: "Book Appointment",
+      secondaryCtaText: "Learn More"
+    },
+    stats: {
+      items: [
+        { label: "YEARS EXPERIENCE", value: "12+" },
+        { label: "PATIENT RATING", value: "4.9★" },
+        { label: "PATIENTS SERVED", value: "3,000+" },
+        { label: "RESPONSE TIME", value: "24h" }
+      ]
+    },
+    services: {
+      title: "Our Services",
+      subtitle: "WHAT WE OFFER"
+    },
+    about: {
+      sectionLabel: "About",
+      title: "Dr. Nafis",
+      ctaText: "Book a Visit"
+    },
+    testimonials: {
+      title: "What Our Patients Say",
+      subtitle: "TESTIMONIALS"
+    },
+    contact: {
+      title: "Get in Touch",
+      subtitle: "CONTACT US"
+    },
+    footer: {
+      logoText: "Dr. Nafis",
+      description: "Dedicated to providing high-quality medical care with a personal touch. Your health is our priority.",
+      copyrightText: "© 2026 Dr. Nafis Tarafder. All rights reserved."
     }
   }
 };

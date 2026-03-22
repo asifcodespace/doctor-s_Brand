@@ -24,7 +24,7 @@
   }
 
   body {
-    @apply bg-white text-charcoal font-body text-[15px] leading-[1.6] transition-colors duration-300;
+    @apply bg-white text-charcoal font-body text-[15px] leading-[1.6] transition-colors duration-300 scroll-pt-[80px];
   }
 
   /* Dark mode */
@@ -108,7 +108,7 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-sm font-body text-sm font-medium cursor-pointer transition-all duration-200 border-none no-underline;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 rounded-md font-body text-sm font-medium cursor-pointer transition-all duration-200 border-none no-underline;
   }
 
   .btn-primary {

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { config } from "$lib/config";
   const testimonials = [
     {
       stars: "★★★★★",
@@ -23,10 +24,10 @@
     <div
       class="text-[11px] tracking-[0.18em] uppercase text-secondary font-medium mb-2"
     >
-      Patient Stories
+      {config.sections.testimonials.subtitle}
     </div>
     <h2 class="font-display text-[38px] text-primary font-light leading-[1.15]">
-      What Patients Say
+      {config.sections.testimonials.title}
     </h2>
   </div>
 

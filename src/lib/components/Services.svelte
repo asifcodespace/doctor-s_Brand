@@ -22,12 +22,12 @@
   <div
     class="text-[11px] tracking-[0.18em] uppercase text-secondary font-medium mb-3"
   >
-    What We Offer
+    {config.sections.services.subtitle}
   </div>
   <h2
     class="font-display text-[clamp(28px,4vw,38px)] text-primary font-light mb-14 leading-[1.15]"
   >
-    Our Services
+    {config.sections.services.title}
   </h2>
 
   <div
