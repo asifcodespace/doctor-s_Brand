@@ -1,15 +1,10 @@
 export const config = {
   doctor: {
-    name: "Dr. Avena",
+    name: "Dr. Nafis",
     title: "General Practitioner",
     qualifications: "MBBS - FCPS",
-<<<<<<< Updated upstream
-    bio: "Dr. Avena is a highly experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, she specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of her patients.",
-    image: "/images/nafis_tarafder.jpeg", // Placeholder for actual doctor image
-=======
     bio: "Dr. Nafis is a highly experienced General Practitioner dedicated to providing comprehensive and compassionate healthcare. With a strong background in both MBBS and FCPS, he specializes in diagnosing and treating a wide array of medical conditions, offering personalized care to each of his patients.",
     image: "/images/nafis_tarafder.jpeg",
->>>>>>> Stashed changes
   },
   contact: {
     phone: "+880 1234 567890",
